@@ -29,7 +29,7 @@ app.get("/health", (_, res) => {
 
 app.use("/products", productsRoute);
 
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
 app.listen(PORT, () => {
     console.log(
